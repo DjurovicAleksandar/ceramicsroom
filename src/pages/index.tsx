@@ -93,7 +93,7 @@ export default function Home() {
         <Image alt="Room" src={room} className="w-full h-full" />
         <div
           onClick={(e) => chooseSide("wall")}
-          className="0 w-[56%] h-[51.5%] absolute top-[23.5%] left-[22%] z-10 opacity-50 cursor-pointer"
+          className=" w-[56%] h-[51.5%] absolute top-[23.5%] left-[22%] z-10  cursor-pointer hover:bg-red-200"
         ></div>
 
         {wall === "tile4" && (
@@ -117,9 +117,12 @@ export default function Home() {
             className="w-[100%] h-[100%] absolute top-0"
           />
         )}
-        <div className="cursor-pointer" onClick={(e) => chooseSide("floor")}>
-          <div className="  w-[64%] h-[24.5%] absolute bottom-[0] right-[4%] z-10 opacity-50 skew-x-[58deg]"></div>
-          <div className=" w-[64%] h-[24.5%] absolute bottom-[0] left-[4%] z-10 opacity-50 -skew-x-[58deg]"></div>
+        <div
+          className="cursor-pointer group"
+          onClick={(e) => chooseSide("floor")}
+        >
+          <div className="  w-[64%] h-[24.5%] absolute bottom-[0] right-[4%] z-10  skew-x-[58deg] group-hover:bg-green-200"></div>
+          <div className=" w-[64%] h-[24.5%] absolute bottom-[0] left-[4%] z-10  -skew-x-[58deg] group-hover:bg-green-200"></div>
         </div>
 
         {floor === "tile1" && (
